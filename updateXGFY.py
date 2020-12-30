@@ -54,7 +54,7 @@ def getContent():
 #消息推送api
 def send(oldlis):
     import requests
-    api = "https://sc.ftqq.com/SCKEY.send"#SCKEY去server酱官网注册可得
+    api = "https://sc.ftqq.com/SCU142264T4d121577bbae7f4fcf9f22a2e9b0af595fecc72fec677.send"#SCKEY去server酱官网注册可得
     title = oldlis[0]
     content = getContent()
     
@@ -67,17 +67,12 @@ def send(oldlis):
 
 #主函数
 if __name__=="__main__":
-    content = getContent()
-    print(content)
-
-    '''
     t=3600      #设置定时时长，单位为秒
     oldlis = titlelist()
     while True:     #间隔t时间查看网页是否更新
         newlis = titlelist()
-        if oldlis==newlis:
+        if oldlis!=newlis:
             oldlis = newlis
             send(oldlis)
         time.sleep(t)
-        '''
 
